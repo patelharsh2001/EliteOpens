@@ -30,9 +30,9 @@ module.exports.displayTournamentList = (req,res,next)=>{
     module.exports.processAddPage = (req,res,next)=>{
         let newList = Tournament_List({
             "name": req.body.name,
-            "Location": req.body.location,
-            "EntryFee": req.body.entryfee,
-            "StartDate":req.body.startdate
+            "location": req.body.location,
+            "entryfee": req.body.entryfee,
+            "startdate":req.body.startdate
         });
 
         Tournament_List.create(newList,(err, Tournament_List)=>{
@@ -72,9 +72,9 @@ module.exports.displayTournamentList = (req,res,next)=>{
     let updatedList = Tournament_List({  
         "_id": id,
         "name": req.body.name,
-        "Location": req.body.location,
-        "EntryFee": req.body.entryfee,
-        "StartDate":req.body.startdate
+        "location": req.body.location,
+        "entryfee": req.body.entryfee,
+        "startdate":req.body.startdate
     });
 
     Tournament_List.updateOne({_id:id},updatedList, (err)=>{
