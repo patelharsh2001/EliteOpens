@@ -27,9 +27,9 @@ router.get('/edit/:id',requireAuth, tournamentController.displayEditPage);
 
 
 
-            router.post('/edit/:id',requireAuth,tournamentController.processEditPage);
+router.post('/edit/:id',requireAuth,tournamentController.processEditPage);
         
-     router.get('/delete/:id',requireAuth,tournamentController.performDelete );
+router.get('/delete/:id',requireAuth,tournamentController.performDelete );
 
 
 
