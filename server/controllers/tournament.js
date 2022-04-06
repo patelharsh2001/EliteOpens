@@ -5,6 +5,8 @@ let mongoose = require('mongoose');
 const { findById } = require('../model/tournament');
 let router = express.Router();
 
+let jwt = require('jsonwebtoken');
+
 let Tournament_List = require('../model/tournament');
 
 module.exports.displayTournamentList = (req,res,next)=>{

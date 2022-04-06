@@ -4,7 +4,11 @@ let express = require('express');
 let mongoose = require('mongoose');
 const { findById } = require('../model/tournament');
 let router = express.Router();
+
+let jwt = require('jsonwebtoken');
+
 let passport = require('passport');
+
 
 let Tournament_List = require('../model/tournament');      
 let tournamentController = require('../controllers/tournament');
