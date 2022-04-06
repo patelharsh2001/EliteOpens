@@ -34,7 +34,8 @@ module.exports.displayTournamentList = (req,res,next)=>{
             "name": req.body.name,
             "location": req.body.location,
             "entryfee": req.body.entryfee,
-            "startdate":req.body.startdate
+            "startdate":req.body.startdate,
+            "status":req.body.status
         });
 
         Tournament_List.create(newList,(err, Tournament_List)=>{
@@ -76,7 +77,8 @@ module.exports.displayTournamentList = (req,res,next)=>{
         "name": req.body.name,
         "location": req.body.location,
         "entryfee": req.body.entryfee,
-        "startdate":req.body.startdate
+        "startdate":req.body.startdate,
+        "status":req.body.status
     });
 
     Tournament_List.updateOne({_id:id},updatedList, (err)=>{
