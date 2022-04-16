@@ -11,11 +11,7 @@ import { Router } from '@angular/router';
 })
 export class TennisTournamentComponent  {
 
-
-
   constructor( private repository: TournamentRepository,private router:Router) { }
-
-  
 
 
   get tournaments():Tournament[]{

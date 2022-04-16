@@ -1,0 +1,34 @@
+<table class="table table-sm table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Entry Fee</th>
+        <th>Start Date</th> 
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let b of getTournaments()'>
+        <td>{{ b.name }}</td>
+        <td>{{ b.location }}</td>
+        <td>{{ b.startDate }}</td>
+        <td>{{ b.entryFee | currency: 'USD': 'symbol': '2.2-2'}}</td>
+        <td>
+          <button class="btn btn-sm btn-primary m-1" (click)='editTournament(b._id!)'>
+            <i class="fas fa-pencil-alt"></i> Edit
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-sm btn-danger m-1" (click)='deleteTournament(b._id!)'>
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)='addTournament()'>
+    <i class="fas fa-plus-circle"></i> Add New Tournament
+  </button>
+  

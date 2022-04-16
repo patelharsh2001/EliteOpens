@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'complete',component:CompleteComponent,data: {title: 'Completed Tournaments'},canActivate:[TournamentFirstGuard]},
   {path: 'list',component:TennisTournamentComponent,data: {title: 'Activated Tournaments'},canActivate:[TournamentFirstGuard]},
   {path: 'list',component:TennisTournamentComponent,data:{title:'Tournaments'},canActivate:[TournamentFirstGuard]},
-  //{path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
+  {path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', redirectTo: '/home', pathMatch: 'full'}
 

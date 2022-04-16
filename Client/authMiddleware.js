@@ -1,19 +1,18 @@
 const jwt = require('jsonwebtoken');
-const { isUnparsedTextLike } = require('typescript');
 const APP_SECRET = 'Secret';
-const USERNAME = 'admin';
-const PASSWORD = '123456';
+const USERNAME = 'harsh';
+const PASSWORD = 'harsh';
 
-const mappings = 
+const mappings =
 {
-    get: ['/api/registration','/registration'],
-    post: ['/api/tournaments','/tournaments']
+  get: ['/api/tournaments', '/tournaments'],
+  post: ['/api/tournaments', '/tournaments', 'api/categories','/categories']
 }
 
-function reuquiresAuth(method, url)
+function requiresAuth(method, url)
 {
-    return (mappings[method.toLowerCase()] || [])
-    .find(p=> url.startsWith(p)) !== undefined;
+  return (mappings[method.toLowerCase()] || [])
+  .find(p=> url.startsWith(p)) !== undefined;
 }
 
 module.exports = function (req, res, next)

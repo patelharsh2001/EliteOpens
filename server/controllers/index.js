@@ -1,30 +1,22 @@
-
-
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
-//enable jwt
-let jwt =require('jsonwebtoken');
+// enable jwt
+let jwt = require('jsonwebtoken');
 let DB = require('../config/db');
 
 // create the User Model instance
-let userModel = require('../model/user');
+let userModel = require('../models/user');
 let User = userModel.User; // alias
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('../views/webpages/home', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
+    res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayCompletePage = (req, res, next) => {
-    res.render('../views/webpages/complete', { title: 'Complete Tournament', displayName: req.user ? req.user.displayName : ''});
-}
-
-
-
-module.exports.displayActivePage = (req, res, next) => {
-    res.render('../views/webpages/active', { title: 'Active Tournament', displayName: req.user ? req.user.displayName : ''});
+    res.render('index', {title: 'Complete', displayName: req.user ? req.user.displayName : ''});
 }
 
 
@@ -78,18 +70,17 @@ module.exports.processLoginPage = (req, res, next) => {
             const authToken = jwt.sign(payload, DB.Secret, {
                 expiresIn: 604800 // 1 week
             });
-            
 
-            // TODO - Getting Ready to convert to API
-            /* res.json({success: true, msg: 'User Logged in Successfully!', user: {
+            
+            return res.json({success: true, msg: 'User Logged in Successfully!', user: {
                 id: user._id,
                 displayName: user.displayName,
                 username: user.username,
                 email: user.email
-            }, token: authToken}); */
+            }, token: authToken});
             
 
-            return res.redirect('/tournament-list');
+            //return res.redirect('/list');
         });
     })(req, res, next);
 }
@@ -145,18 +136,20 @@ module.exports.processRegisterPage = (req, res, next) => {
 
             // redirect the user and authenticate them
 
-            //TODO - Getting Ready to convert to API
-             /* res.json({success: true, msg: 'User Registered Successfully!'}); */
             
-
-             return passport.authenticate('local')(req, res, () => {
-                res.redirect('tournament-list')
-            });  
+           return res.json({success: true, msg: 'User Registered Successfully!'});
+            
+            /*
+            return passport.authenticate('local')(req, res, () => {
+                res.redirect('/list')
+            });
+            */
         }
     });
 }
 
 module.exports.performLogout = (req, res, next) => {
     req.logout();
-    res.redirect('/');
+    //res.redirect('/');
+    res.json({success:true,msg:'User Is Successfully Loged Out'})
 }

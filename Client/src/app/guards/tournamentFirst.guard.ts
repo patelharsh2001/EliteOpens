@@ -17,7 +17,7 @@ export class TournamentFirstGuard
       this.firstNavigation = false;
       if (route.component !== TennisTournamentComponent)
       {
-        this.router.navigateByUrl('/tournament');
+        this.router.navigateByUrl('/list');
         return false;
       }
     }

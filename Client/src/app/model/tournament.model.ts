@@ -1,3 +1,4 @@
+
 export class Tournament
 {
     [x: string]: any;

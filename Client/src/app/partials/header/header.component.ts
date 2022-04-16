@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import { AuthService } from 'src/app/model/auth.service';
+import { AuthService } from 'src/app/model/auth.service';
 import { User } from 'src/app/model/user.model';
 
 @Component({
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
 
   onLogoutClick(): void
   {
-    this.authService.logout().subscribe(() => {
+    this.authService.logout().subscribe(data => {
       this.router.navigate(['/login']);
     });
   }

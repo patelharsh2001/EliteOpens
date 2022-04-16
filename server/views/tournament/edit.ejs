@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+  <%- include ../partials/header.ejs %>   
+  
+  <body class="d-flex flex-column h-1000 mb-5" style="background-color: rgb(18, 18, 19);" >
+    <header>      
+      <%- include ../partials/main_nav.ejs %>
+    </header>
+    <main class="flex-shrink-0">
+      <div class="container mt-4 mb-2" style="box-shadow: 1px 1px 5px 3px rgb(41 55 74); background-color: rgb(33 32 32);">
+        <div class="row" style="height: 100%;" >
+
+<!-- Content for the Add page -->
+<div class="container text-white">
+    <div class="row">
+        <div class="offset-md-3 col-md-6 text-center">
+            <h1><%= title %></h1> <br><br>
+
+            <form class="form" method="POST">
+              <div class="form-group">
+                <label for="NameTextField">Name</label>
+                <input type="text" class="form-control" id="NameTextField"
+                placeholder="Tournament Name" name="name" value="<%= tournament.Name %>" required>
+              </div>
+              <div class="form-group">
+                <label for="PriceTextField">Start Date</label>
+                <input type="text" class="form-control" id="StartTextField"
+                placeholder="Start Date" name="startdate" value="<%= tournament.StartDate %>"  required>
+              </div>
+              
+              <div class="form-group">
+                <label for="GenreTextField">Location</label>
+                <input type="text" class="form-control" id="LocationTextField"
+                placeholder="Location" name="location" value="<%= tournament.Location %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="DescriptionTextField">Entry Fee</label>
+                <input type="text" class="form-control" id="FeeTextField"
+                placeholder="Entry Fee" name="entryfee" value="<%= tournament.EntryFee %>"  required>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/list" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+</main>
+</body>
+<footer class="footer mt-auto py-2 fixed-bottom" style="background-color: rgb(19, 67, 170);">
+<% include ../partials/footer.ejs %>
+<% include ../partials/bottom_nav.ejs %>
+
+</footer>
+</html>
