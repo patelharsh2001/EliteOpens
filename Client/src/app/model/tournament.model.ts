@@ -7,8 +7,8 @@ export class Tournament
         public _id?: number,
         public name?:string,
         public location?:string,
+        public startDate?:string,
         public entryFee?:string,
-        public startDate?:string
 
     ){}
     public toString(): string
@@ -18,8 +18,8 @@ export class Tournament
     -------------------------------
     Name       : ${this.name}
     Location   : ${this.location}
-    EntryFee   : ${this.entryFee}
     StartDate  : ${this.startDate}
+    EntryFee   : ${this.entryFee}
     
     -------------------------------
     `;

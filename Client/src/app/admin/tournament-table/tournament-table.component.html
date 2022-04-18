@@ -3,8 +3,8 @@
       <tr>
         <th>Name</th>
         <th>Location</th>
-        <th>Entry Fee</th>
-        <th>Start Date</th> 
+        <th>Start Date</th>
+        <th>Entry Fee</th> 
         <th></th>
         <th></th>
       </tr>
@@ -14,7 +14,7 @@
         <td>{{ b.name }}</td>
         <td>{{ b.location }}</td>
         <td>{{ b.startDate }}</td>
-        <td>{{ b.entryFee | currency: 'USD': 'symbol': '2.2-2'}}</td>
+        <td>{{ b.entryFee}}</td>
         <td>
           <button class="btn btn-sm btn-primary m-1" (click)='editTournament(b._id!)'>
             <i class="fas fa-pencil-alt"></i> Edit

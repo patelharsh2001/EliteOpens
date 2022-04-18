@@ -35,7 +35,7 @@
                     <th class="text-center col-3" >Name</th>
                     <th class="text-center col-2">StartDate</th>
                     <th class="text-center col-3 ">Location</th>
-                    <th class="text-center col-2 ">EntryFee</th>
+                    <th class="text-center col-3 ">EntryFee</th>
                     <th class="text-center col-1"></th>
                     <th class="text-center col-1"></th>
                 </tr>
@@ -48,7 +48,7 @@
                       <td class="text-center col-3" ><%= TournamentList[count].Name %></td>
                       <td class="text-center col-2"><%= TournamentList[count].StartDate %></td>
                       <td class="text-center col-3"><%= TournamentList[count].Location %></td>
-                      <td class="text-center col-2">$<%= TournamentList[count].EntryFee %></td>
+                      <td class="text-center col-3">$<%= TournamentList[count].EntryFee %></td>
                       <td class="text-center col-1">
                         <a href="/list/edit/<%= TournamentList[count]._id %>" class="btn btn-primary btn-sm">
                           <i class="fas fa-pencil-alt">Edit</i>
