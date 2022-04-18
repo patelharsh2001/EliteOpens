@@ -14,9 +14,15 @@
       <tr *ngFor='let b of getTournaments()'>
         <td>{{ b.name }}</td>
         <td>{{ b.location }}</td>
+        <td>{{ b.entryFee }}</td>
+        <!-- | currency: 'USD': 'symbol': '2.2-2' -->
         <td>{{ b.startDate }}</td>
+<<<<<<< HEAD
         <td>{{ b.entryFee}}</td>
         <td>{{ b.status}}</td>
+=======
+        
+>>>>>>> 868189510cd267a8181f05988fc498fcca187046
         <td>
           <button class="btn btn-sm btn-primary m-1" (click)='editTournament(b._id!)'>
             <i class="fas fa-pencil-alt"></i> Edit

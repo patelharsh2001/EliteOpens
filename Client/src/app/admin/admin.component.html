@@ -1,12 +1,13 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
+
     <div class="row"></div>
   
     <div class="row mt-2">
-      <div class="col-3">
+      <div class="col-4">
         <button class="btn btn-outline-info btn-block"
           routerLink='/admin/main/tournaments'
           routerLinkActive='active'>
-          Tournaments
+          Add Tournament
         </button>
   
         
@@ -16,4 +17,17 @@
       </div>
     </div>
   </div>
-  
+</div> -->
+
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <button class="btn btn-outline-info btn-block"
+          routerLink='/admin/main/tournaments'
+          routerLinkActive='active'>
+          Add Tournament
+      </button>
+      <div class="d-flex justify-content-center align-items-center vh-100">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>
