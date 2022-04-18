@@ -5,6 +5,7 @@
         <th>Location</th>
         <th>Start Date</th>
         <th>Entry Fee</th> 
+        <th>Status</th>
         <th></th>
         <th></th>
       </tr>
@@ -15,6 +16,7 @@
         <td>{{ b.location }}</td>
         <td>{{ b.startDate }}</td>
         <td>{{ b.entryFee}}</td>
+        <td>{{ b.status}}</td>
         <td>
           <button class="btn btn-sm btn-primary m-1" (click)='editTournament(b._id!)'>
             <i class="fas fa-pencil-alt"></i> Edit
