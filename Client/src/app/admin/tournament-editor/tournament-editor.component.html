@@ -1,7 +1,7 @@
 <div class="bg-primary p-2 text-white bg-dark"
   [class.bg-warning]='editing'
   [class.text-dark]='editing'>
-  <h5>{{ editing ? 'Edit' : 'Add'}} Tournament</h5>
+  <h5>{{ editing ? 'Edit' : 'Add'}}Tournament</h5>
 </div>
 <form novalidate #form='ngForm' (ngSubmit)='save(form)'>
 
