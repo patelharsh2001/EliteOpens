@@ -9,6 +9,7 @@ export class Tournament
         public location?:string,
         public startDate?:string,
         public entryFee?:string,
+        public status?:string,
 
     ){}
     public toString(): string
@@ -20,6 +21,7 @@ export class Tournament
     Location   : ${this.location}
     StartDate  : ${this.startDate}
     EntryFee   : ${this.entryFee}
+    Status     : ${this.status}
     
     -------------------------------
     `;

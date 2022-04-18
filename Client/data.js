@@ -5,18 +5,18 @@ module.exports=function(){
         [
             {
                 _id: 1,
-                name: "Home Cricket",
-                location: "Dallas",
-                entryFee: "500",
-                startDate: " 10th December 2021 ",
+                name: "Mens Double",
+                location: "Wimbeldon",
+                entryFee: "50",
+                startDate: " 19th April 2022 ",
     
             },
             {
                 _id: 2,
-                name: "Gully Cricket",
-                location: "Downtown",
-                entryFee: "1500",
-                startDate: " 10th November 2021 ",
+                name: "Womens Double",
+                location: "London",
+                entryFee: "100",
+                startDate: " 19th May 2022 ",
                 
             },
             
