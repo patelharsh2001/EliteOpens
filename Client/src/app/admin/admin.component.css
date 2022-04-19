@@ -5,3 +5,7 @@ html{
 div{
     background-color: #2a9d8f;
 }
+
+router-outlet{
+    background-color: #2a9d8f;
+}
