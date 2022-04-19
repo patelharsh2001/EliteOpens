@@ -1,14 +1,14 @@
-<div class="container-fluid">
+<div class="container-fluid my-5">
     <div class="row text-white">
         
         <div class="col-12">
             <div *ngFor ='let tournament of tournaments'   class="card m-1p-1 bg-black">
-                <table border="2">
+                <table border="5">
                     <!-- Header Row-->
                     <tr class="d-flex">
                         <th class="text-center col-3" >{{tournament.name}}</th>
-                        <th class="text-center col-2">{{tournament.startDate}}</th>
                         <th class="text-center col-3 ">{{tournament.location}}</th>
+                        <th class="text-center col-2">{{tournament.startDate}}</th>
                         <th class="text-center col-2 ">{{tournament.entryFee}}</th>
                         <th class="text-center col-2 ">{{tournament.status}}</th>
                         <th class="text-center col-1"></th>
@@ -25,7 +25,12 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
     <img src="../../assets/images/tenniscourt.png" alt="tenniscourt">
 </div>
-                    
 
-        
-    
+
+    <!-- <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <img src="../../assets/images/tenniscourt.png" alt="tenniscourt">
+        </div>
+        <div class="col-2"></div>
+    </div> -->
