@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Tournament } from '../model/tournament.model';
 import { TournamentRepository } from '../model/tournament.repository';
 import { Router } from '@angular/router';
+import { extend } from 'jquery';
+import BaseComponent from 'bootstrap/js/dist/base-component';
 
 
 @Component({
@@ -9,7 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './tennis-tournament.component.html',
   styleUrls: ['./tennis-tournament.component.css']
 })
-export class TennisTournamentComponent  {
+export class TennisTournamentComponent{
 
   constructor( private repository: TournamentRepository,private router:Router) { }
 

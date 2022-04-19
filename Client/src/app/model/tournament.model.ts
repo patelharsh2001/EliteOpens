@@ -9,7 +9,7 @@ export class Tournament
         public location?:string,
         public startDate?:string,
         public entryFee?:string,
-        public status?:string,
+        public status?:string
 
     ){}
     public toString(): string
