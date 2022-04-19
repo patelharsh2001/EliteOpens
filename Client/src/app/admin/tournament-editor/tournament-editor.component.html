@@ -25,10 +25,23 @@
     <input type="text" class="form-control" name="entryfee" [(ngModel)]='tournament.entryFee'>
   </div>
   
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label>Status</label>
     <input type="text" class="form-control" name="status" [(ngModel)]='tournament.status'>
+  </div> -->
+
+
+  <div class="form-group">
+    <div class="input-group-prepend">
+      <label>Status</label>
+    </div>
+    <select class="form-control" name="status" [(ngModel)]='tournament.status'>
+      <option value="Active">Active</option>
+      <option value="Completed">Completed</option>
+    </select>
   </div>
+
+
 
   <button type='submit' class="btn btn-primary m-1" [class.btn-warning]='editing'>
     <i class="{{editing ? 'fas fa-save' : 'fas fa-plus-circle' }}"></i> {{ editing ? "Save" : "Add" }}
