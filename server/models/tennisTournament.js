@@ -16,8 +16,8 @@ class Tournament
         return "id          :" + this._id + "\n" +
                "name        : " + this.name + "\n" +
                "location      : " + this.location + "\n" +
-               "entry Fee :" + this.entryFee + "\n" +
                "startDate       :" + this.startDate + "\n" +
+               "entry Fee :" + this.entryFee + "\n" +
                "status     :" + this.status;
     }
 }
