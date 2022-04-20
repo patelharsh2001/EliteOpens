@@ -7,17 +7,17 @@ module.exports=function(){
                 _id: 1,
                 name: "Mens Double",
                 location: "Wimbeldon",
-                entryFee: "50",
                 startDate: " 19th April 2022 ",
-    
+                entryFee: "50",
+                status: "Active"
             },
             {
                 _id: 2,
                 name: "Womens Double",
                 location: "London",
-                entryFee: "100",
                 startDate: " 19th May 2022 ",
-                
+                entryFee: "100",
+                status: "Completed"
             },
             
         ],

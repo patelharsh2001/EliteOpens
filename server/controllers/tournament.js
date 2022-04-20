@@ -32,8 +32,7 @@ module.exports.processAddPage = (req, res, next) => {
         "name": req.body.name,
         "location": req.body.location,
         "entryFee": req.body.entryFee,
-        "startDate":req.body.startDate,
-        "status":req.body.status
+        "startDate":req.body.startDate
     });
 
     Tournament.create(newTournament, (err, Tournament) =>{
@@ -81,8 +80,7 @@ module.exports.processEditPage = (req, res, next) => {
         "name": req.body.name,
         "location": req.body.location,
         "entryFee": req.body.entryFee,
-        "startDate":req.body.startDate,
-        "status":req.body.status
+        "startDate":req.body.startDate
     });
 
     Tournament.updateOne({_id: id}, updatedTournament

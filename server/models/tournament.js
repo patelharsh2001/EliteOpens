@@ -5,9 +5,8 @@ let Tournament = mongoose.Schema({
     
     name: String,
     location: String,
-    entryFee: String,
     startDate: String,
-    status: String
+    entryFee: String
 },
 {
   collection: "tournaments"

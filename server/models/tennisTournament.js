@@ -8,7 +8,6 @@ class Tournament
         this.location=location;
         this.startDate=startDate;
         this.entryFee=entryFee;
-        this.status=status;
     }
 
     toString()
@@ -16,9 +15,9 @@ class Tournament
         return "id          :" + this._id + "\n" +
                "name        : " + this.name + "\n" +
                "location      : " + this.location + "\n" +
-               "entry Fee :" + this.entryFee + "\n" +
                "startDate       :" + this.startDate + "\n" +
-               "status     :" + this.status;
+               "entry Fee :" + this.entryFee;
+               
     }
 }
 
